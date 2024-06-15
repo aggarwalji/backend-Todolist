@@ -20,7 +20,7 @@ app.get('/',(req,res)=>{
 });
 
 
-app.post('/create', (req,res)=>{
+app.post('/create ', (req,res)=>{
     let{ username,email,password,age } =req.body;
     bcrypt.genSalt(10,(err,salt)=>{
         bcrypt.hash(password,salt,async (err,hash)=>{
